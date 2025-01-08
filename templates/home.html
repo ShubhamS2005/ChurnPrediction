@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="job">Job:</label>
+            <input type="text" name="job" required>
+
+            <label for="marital">Marital Status:</label>
+            <input type="text" name="marital" required>
+
+            <label for="education">Education:</label>
+            <input type="text" name="education" required>
+
+            <label for="default">Default(yes/no):</label>
+            <input type="text" name="default" required>
+
+            <label for="balance">Balance:</label>
+            <input type="float" name="balance" required>
+
+            <label for="housing">Housing:</label>
+            <input type="text" name="housing" required>
+
+            <label for="loan">Loan:</label>
+            <input type="text" name="loan" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" name="contact" required>
+
+            <label for="day">Days:</label>
+            <input type="number" name="day" required>
+
+            <label for="month">month:</label>
+            <input type="text" name="month" required>
+
+            <label for="duration">Duration:</label>
+            <input type="number" name="duration" required>
+
+            <label for="campaign">Campaign(number of contacts):</label>
+            <input type="number" name="campaign" required>
+
+            <label for="pdays">Days passed by(pdays):</label>
+            <input type="number" name="pdays" required>
+
+            <label for="duration">Number of contacts(previous):</label>
+            <input type="number" name="previous" required>
+
+            <label for="poutcome">outcome of prev Campian:</label>
+            <input type="text" name="poutcome" required>
+
+            <button type="submit">Predict Churn</button>
+        </form>
+
+        {% if result %}
+        <div class="result {{ result_class }}">
+            <h2>{{ result }}</h2>
+            
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
