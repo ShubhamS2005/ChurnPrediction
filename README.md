@@ -1,4 +1,4 @@
-# Customer Churn Prediction Web Application
+# Customer Churn Prediction
 
 ## Project Overview:
 This project is a **Customer Churn Prediction** web application built using **Flask**, **Scikit-Learn**, and **Python**. 
